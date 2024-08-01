@@ -62,7 +62,8 @@ ul {
   list-style: none;
 }
 
-.small-screen {
+.small-screen,
+.small-600 {
   display: none;
 }
 
@@ -472,7 +473,6 @@ ul {
 .marble-section-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 1.5rem;
 }
 
@@ -914,6 +914,8 @@ footer .inner-container {
 
 #pqr .col-txt {
   margin-right: 4px;
+  white-space: nowrap;
+
 }
 
 #pqr .col-down-arrow {
@@ -1003,8 +1005,8 @@ footer .inner-container {
 
 @media screen and (max-width: 1000px) {
   .small-screen {
-    display: unset;
-    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
   }
 
@@ -1016,10 +1018,8 @@ footer .inner-container {
     background-color: var(--background-small);
     padding: 7px 9px 10px;
     position: fixed;
-    /* width: calc(100% - 18px); */
     width: 100%;
     top: 0;
-    /* right: 0; */
     z-index: 100;
     box-sizing: border-box;
   }
@@ -1046,11 +1046,7 @@ footer .inner-container {
     white-space: nowrap;
   }
 
-  .small-open-app img {
-  }
 
-  .small-yelp-logo {
-  }
 
   .small-hamburger {
     padding-right: 9px;
@@ -1080,7 +1076,6 @@ footer .inner-container {
 
   .small-nav-row2 {
     padding: 15px 1px 0;
-    /* background-color: #fff; */
   }
   .small-searchField {
     background-color: #fff;
@@ -1091,7 +1086,6 @@ footer .inner-container {
 
   .small-boxes {
     padding: 12px 9px;
-    /* margin: 0 -3px; */
     margin-bottom: 24px;
     margin-top: 104px;
   }
@@ -1099,9 +1093,6 @@ footer .inner-container {
   .small-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-self: unset; */
   }
 
   .small-box li {
@@ -1109,18 +1100,12 @@ footer .inner-container {
     box-sizing: border-box;
     margin: 0 auto;
     margin-top: 6px;
-    /* width: 100%; */
-    /* width: 25%; */
-
-    /* width: 100%; */
-    /* width: 25%; */
     max-width: 239.5px;
   }
 
   .small-box-container {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
     text-align: center;
     padding: 6px 0;
     box-sizing: border-box;
@@ -1144,16 +1129,15 @@ footer .inner-container {
   }
 
   .small-services {
-    /* padding-left: 12px; */
     padding: 0 12px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 24px;
   }
 
   .small-services-heading {
     display: flex;
     line-height: 24px;
-    /* height: 24px; */
     font-size: 16px;
     color: rgb(51, 51, 51);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -1162,8 +1146,6 @@ footer .inner-container {
     margin-bottom: 12px;
   }
 
-  .small-slider {
-  }
 
   .small-slider-contents {
     display: flex;
@@ -1173,10 +1155,10 @@ footer .inner-container {
   }
 
   .small-slider-contents li {
+    margin-bottom: 5px;
   }
 
   .small-slider-contents li img {
-    /* margin-bottom: 6px; */
     border-radius: 3px;
   }
 
@@ -1190,8 +1172,7 @@ footer .inner-container {
     position: absolute;
     right: 24px;
     top: 50%;
-    transform: translateY(5px);
-    /* top: 10px; */
+    transform: translateY(-22px);
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(235, 235, 235);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
@@ -1206,20 +1187,319 @@ footer .inner-container {
     opacity: 0.8;
   }
 
-  .small-right-arrow img {
+  
+
+  .small-open-yelp {
+    background-color: rgba(45, 46, 47, 1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 48px;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .small-open-yelp {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--font-poppins-medium);
+    margin-top: 1px;
+    line-height: 24px;
+    display: flex;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+  }
+
+  .small-container {
+    margin: 0 12px;
+  }
+
+
+  .new-business-container {
+    margin-bottom: 36px;
+  }
+
+  .new-business-container h2 {
+    font-size: 21px;
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+    line-height: 26.999px;
+    margin-bottom: 5px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+  .business-review {
+    display: flex;
+    padding: 12px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .business-review img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+  }
+
+  .review-text-section {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .business-review-heading {
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 17.9999px;
+    font-weight: 700;
+  }
+
+  .business-rating {
+    display: flex;
+    box-sizing: border-box;
+    height: 18px;
+    margin: 3px 0;
+  }
+
+  .rating-star {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    height: 18px;
+  }
+
+  .rating-star li {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1px;
+  }
+
+  .rating-star li img {
+    height: 14px;
+    width: 14px;
+  }
+
+  .rating-text {
+    color: rgb(102, 102, 102);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    height: 18px;
+    align-items: center;
+    margin-left: 6px;
+  }
+
+  .business-review-description {
+    color: rgb(51, 51, 51);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+  }
+
+  .small-more-businesses {
+    padding: 8px 19px 9px;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    color: rgba(102, 102, 102, 1);
+  }
+
+  .small-more-business-text {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    word-wrap: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.999px;
+  }
+
+  .best-restaurants {
+    padding: 25px 18px 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .best-restaurants h2 {
+    height: 36px;
+    margin-bottom: 11px;
+  }
+
+  .best-restaurants-heading {
+    color: rgb(51, 51, 51);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.4px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  .best-restaurants-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-restaurants-list li {
+    display: flex;
+    height: 18px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+
+  .best-restaurants-list li span {
+    color: #000;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 17.999px;
+    font-size: 14px;
+  }
+
+  .footer-section {
+    padding: 60px 0;
+  }
+
+  footer .inner-container {
+    padding: 0;
+  }
+
+  .footer-contents {
+    margin: 0 -12px;
+  }
+
+  .footer-col {
+    margin: 0 12px;
+  }
+
+  .footer-last-txt-container {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .footer-last-txt {
+    align-items: center;
+    letter-spacing: normal;
+  }
+
+  .add-business {
+    margin-top: 49px;
+  }
+
+  .add-business span {
+    color: rgb(2, 122, 151);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .yelp-footer-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+  }
+
+  .col-heading {
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 1px;
+    line-height: 24px;
+    white-space: wrap;
+  }
+
+  .footer-col-contents li {
+    line-height: 20px;
+  }
+
+  .yelp-footer-logo {
+    width: 38px;
+    height: 19px;
+    padding: 0;
+    margin: 0;
+    margin-left: 2px;
+    margin-bottom: 2px;
+  }
+
+  .yelp-footer-icon {
+    width: 14px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    margin-left: 2.2px;
+    margin-right: 4px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-
+@media screen and (max-width: 605px) {
   .marble-section-container {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .recent-activity .section-heading-textt {
     font-size: 24px;
+  }
+
+  .col-heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .large-600 {
+    display: none;
+  }
+  .small-600 {
+    display: contents;
+  }
+
+  .small-footer-list {
+    display: flex;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .small-footer-list li {
+    display: flex;
+    align-items: center;
+    padding-right: 4px;
+  }
+
+  .small-footer-list li span {
+    color: rgb(2, 122, 151);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .small-footer-list li .footer-dot {
+    font-size: 6px;
+    display: flex;
+    align-items: center;
+    width: 12.55px;
+    justify-content: center;
+  }
+
+  .add-business,
+  .footer-last-txt-container {
+    margin-top: 24px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+  .footer-section {
+    padding: 48px 0;
   }
 }
